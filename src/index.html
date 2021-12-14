@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles/style.css" type="text/css" /> -->
+    <title>COVID-19</title>
+  </head>
+  <body>
+    <!-- 
+      BEM
+      Block => board__title
+      Element
+      Modifier
+     -->
+    <div class="main">
+      <header class="board-title board-title__header">
+        <h1><a href="/">Global COVID-19 Dashboard</a></h1>
+      </header>
+      <main class="board-body">
+        <!-- #1 -->
+        <article class="board-article">
+          <header class="board-article__header">
+            <div id="headerWorldSpinnerJS">
+              <table class="header-wrapper">
+                <tbody>
+                  <tr id="headerWorldIndexJS">
+                    <td id="worldCasesJS">
+                      <h2>Cases</h2>
+                      <h1></h1>
+                      <span></span>
+                    </td>
+                    <td id="worldDeathsJS">
+                      <h2>Deaths</h2>
+                      <h1></h1>
+                      <span></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </header>
+          <section class="board-article__section">
+            <div class="board-article__section-header">
+              <div class="board-article__section-header-control">
+                <div class="board-article__section-header-control--buttons">
+                  <button class="board-article__section--button-case selected" id="toggleCaseJS">
+                    Case
+                  </button>
+                  <button class="board-article__section--button-death" id="toggleDeathJS">
+                    Death
+                  </button>
+                </div>
+                <input type="text" placeholder="Search" />
+              </div>
+              <div class="conf__item-header">
+                <p>
+                  <span id="locationBtn" class="sortBtn">location</span>
+                </p>
+                <span><span id="totalBtn" class="sortBtn total">total</span></span>
+                <span><span id="twoWeekBtn" class="sortBtn">15-day</span></span>
+                <span><span id="oneDayBtn" class="sortBtn">1-day</span></span>
+              </div>
+            </div>
+            <div class="board-article__section-list" id="caseByCountryListJS"></div>
+          </section>
+          <footer class="board-article__footer">
+            <span id="updateTimeJS"></span>
+          </footer>
+        </article>
+        <!-- #2 -->
+        <!-- display: none -->
+        <aside class="board-aside">
+          <div class="board-aside__section">
+            <div class="board-aside__section-confirmed" id="dayConfirmedJS">
+              <!-- <h2>Total Confirmed Cases</h2> -->
+              <canvas id="canvas1JS"></canvas>
+            </div>
+            <div class="board-aside__section-death" id="dayDeathJS">
+              <!-- <h2>Total Deaths</h2> -->
+              <canvas id="canvas2JS"></canvas>
+            </div>
+          </div>
+          <!-- display: none -->
+          <div class="board-aside__graph" style="display: none">
+            <canvas id="canvasJS"></canvas>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

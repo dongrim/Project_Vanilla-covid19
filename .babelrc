@@ -1,0 +1,24 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env"
+      // {
+      //   "targets": "> 2%, not dead",
+      //   "corejs": 3,
+      //   "useBuiltIns": "entry",
+      //   "modules": false,
+      //   "shippedProposals": true
+      // }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
+  ]
+}
